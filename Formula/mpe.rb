@@ -6,14 +6,14 @@ class Mpe < Formula
   
   # Main URL for the source/binary
   url "https://github.com/manetubot/homebrew-tap/releases/download/v1.0.0/mpe-1.0.0.tar.gz"
-  sha256 "c1e8b08bf59fd84212b5992353ef4f17b25e5d88dee806e339608e19d5117dfa"
+  sha256 "f844a477d14937b3bb80f543427c41813b4b0fdc62ea202b10309a93b3bf331b"
   
   bottle do
     root_url "https://github.com/manetubot/homebrew-tap/releases/download/v1.0.0"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "5820f1cecce2e3960d052edb1a6e0667338e94ac31ba853d1da6a92986b74f45"
-    sha256 cellar: :any_skip_relocation, monterey: "579e55936cb07b263c20191205516935e14a107974e8c4a1cd39f6bb575e03f6"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "8b36737702588feeeb11156e1af776bbce5d79f1a257b95cd0dbf112bb9d049f"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "f164f91cac9a196c169d89f925557f53d99c868644955fb4a90422377e4968f5"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "b6e0b43a4d77d690d85d29f8a479c1d8534f8b689edd3b571f8f8633039874f5"
+    sha256 cellar: :any_skip_relocation, monterey: "cbcdc171a4f84be02713f9b76a1e0427849dc3b451bcb66014e660a700ae2b48"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "4e09fbd4412208508d1420c2704a5e376c640091e9ae61830d2355cfd2eabc58"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "d3d5645758f1ca516eb0eab99fde9aa727658a6012398bf0db7faff3f0814a32"
   end
   
   def install
