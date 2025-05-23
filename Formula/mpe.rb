@@ -6,30 +6,18 @@ class Mpe < Formula
   
   # Main URL for the source/binary
   url "https://github.com/manetubot/homebrew-tap/releases/download/v1.0.0/mpe-1.0.0.tar.gz"
-  sha256 "90754bd35c4894365e370db6dcb7f7a73b65029d2bb7edd66687635acfc71b47"
+  sha256 "56c05c8664037310adba934c0c06e527cead4bd0b2d6ae8155f6565932c32b28"
   
   bottle do
     root_url "https://github.com/manetubot/homebrew-tap/releases/download/v1.0.0"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "d8ec3c6f9cb875fcf0889d7c028dfb46e6cfcbc9bfbc95b01ab247bde4a1a6fd"
-    sha256 cellar: :any_skip_relocation, monterey: "9c6448ee2a1219ae610878ecbb0150b980877ab9beca7da12c39bb4dc8782a37"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "d05e16c900ddfe7c2526a1e2a103177c6622921f258200745c89f939049bc46e"
-    sha256 cellar: :any_skip_relocation, arm64_linux: "0c6f2bf21b7110c29172fa96f9db3f1a50e8becf5d0911ace78e129674ada8ea"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "a7de64470f2f9107ee7a4b5dbc0d1186d435c92ed7fc7d2dacaca6894cad498d"
+    sha256 cellar: :any_skip_relocation, monterey: "6e3f2a8115e4770255a76cdc97265f12fdb920c74794315f08ece9e7ac78f464"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ea3baf77f14fb4fd51861db60bcf880205fe7cbc2f725161d7555feffcfb8fad"
+    sha256 cellar: :any_skip_relocation, arm64_linux: "8909055b49a622b5d291bc3ca93e59ded39f9b90e9817d6a9607744eb798ad4f"
   end
   
   def install
-    if OS.mac?
-      if Hardware::CPU.arm?
-        bin.install "bin/mpe-cli-darwin-arm64" => "mpe"
-      else
-        bin.install "bin/mpe-cli-darwin-amd64" => "mpe"
-      end
-    elsif OS.linux?
-      if Hardware::CPU.arm?
-        bin.install "bin/mpe-cli-linux-arm64" => "mpe"
-      else
-        bin.install "bin/mpe-cli-linux-amd64" => "mpe"
-      end
-    end
+    bin.install "bin/mpe"
   end
   
   test do
